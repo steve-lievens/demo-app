@@ -7,7 +7,8 @@ function LandingPage({ envData, setEnvData }) {
     <div className="my-infopane">
       <Grid className="landing-page" fullWidth>
         <Column lg={16} md={8} sm={4} className="landing-page__welcome">
-          <h1 className="landing-page__heading">Welkom bij RWS !</h1>
+          <h1 className="landing-page__heading">RWS Hackaton</h1>
+          <h4 className="landing-page__heading">IBM Technology demo</h4>
         </Column>
         <Column lg={16} md={8} sm={4} className="landing-page_nav">
           <Grid>
@@ -18,8 +19,15 @@ function LandingPage({ envData, setEnvData }) {
                 renderIcon={Search}
                 className="landing-page_navtile"
               >
-                <div className="landing-page_navtitle">Rapport</div>
-                <div>Korte uitleg ... TODO</div>
+                <div className="landing-page_navtitle">
+                  Vergunningsoverzicht
+                </div>
+                <div>
+                  Het is op dit moment erg tijdrovend om een helder overzicht te
+                  krijgen van welke vergunningen geldig zijn. Het aanmaken van
+                  een historisch overzicht van alle wijzigingen tov de
+                  oorspronkelijke vergunning zal hierbij van grote waarde zijn.
+                </div>
               </ClickableTile>
             </Column>
 

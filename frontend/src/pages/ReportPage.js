@@ -54,9 +54,9 @@ function ReportPage({ envData, setEnvData }) {
             <BreadcrumbItem>
               <a href="/">Home</a>
             </BreadcrumbItem>
-            / Rapport
+            / Vergunningsoverzicht
           </Breadcrumb>
-          <h1 className="landing-page__heading">Rapport</h1>
+          <h1 className="landing-page__heading">Vergunningsoverzicht</h1>
         </Column>
 
         <Column lg={16} md={8} sm={4} className="landing-page_nav">
