@@ -127,3 +127,25 @@
 .margin-left-10 {
   margin-left: 10px;
 }
+.markdown-area * {
+  margin: 20px 0;
+}
+
+.markdown-area {
+  overflow-x: auto;
+}
+.markdown-area th {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.markdown-area table,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-area tr:nth-child(even) {
+  background-color: rgb(248, 246, 246);
+}

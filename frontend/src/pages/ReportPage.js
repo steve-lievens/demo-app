@@ -12,7 +12,6 @@ import { sendGetBucketContents, sendGetFileContent } from "../api-calls";
 
 function ReportPage({ envData, setEnvData }) {
   const [cosFiles, setCosFiles] = useState([]);
-  const [cosFile, setCosFile] = useState("");
   const [markdown, setMarkdown] = useState("");
 
   useEffect(function () {
@@ -43,7 +42,7 @@ function ReportPage({ envData, setEnvData }) {
     console.log("INFO: Clicking the Dropdown button ...");
     console.log("INFO: Selected filename : " + fileName);
 
-    setCosFile(event.selectedItem.Key);
+    //setCosFile(event.selectedItem.Key);
     getCosContent(fileName);
   };
 
@@ -71,7 +70,9 @@ function ReportPage({ envData, setEnvData }) {
           />
         </Column>
         <Column lg={16} md={8} sm={4} className="landing-page_nav">
-          <Markdown remarkPlugins={[remarkGfm]}>{markdown}</Markdown>
+          <Markdown className="markdown-area" remarkPlugins={[remarkGfm]}>
+            {markdown}
+          </Markdown>
         </Column>
       </Grid>
     </div>
