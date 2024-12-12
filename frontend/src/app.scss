@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#errorpage {
+  padding-top: 100px;
+  padding-left: 50px;
+}
+
+.my-infopane {
+  padding-top: 48px;
+}
+
+.landing-page__welcome {
+  padding-top: 30px;
+}
+
+.landing-page__heading {
+  padding-top: 30px;
+}
+
+.landing-page_nav {
+  padding-top: 30px;
+}
+
+.landing-page_navtile {
+  height: 200px;
+}
+
+.landing-page_navtitle {
+  color: #000;
+  font-size: 20px;
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.32px;
+  text-transform: uppercase;
+  padding-bottom: 51px;
+}
+
+.landing-page_illustration {
+  padding-top: 83px;
+}
+
+.landing-page_image {
+  max-width: 100%;
+}
+.my-demo-buttons {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.my-demo-buttonone {
+  margin-right: 8px;
+}
+
+.my-rowdetail-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.my-rowdetail-tile {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.my-rowdetail-dropdown {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.my-rowdetail-savebutton {
+  margin-right: 10px;
+}
+.my-rowdetail-confidence {
+  padding: 10px;
+  background-color: rgb(214, 249, 214);
+  overflow: hidden;
+}
+
+.my-rowdetail-confidence-label {
+  float: left; /* add this */
+}
+
+.my-rowdetail-confidence-number {
+  padding-left: 10px;
+  font-weight: 700;
+  overflow: hidden; /* if you don't want #second to wrap below #first */
+}
+
+.my-rowdetail-commentarea {
+  padding-top: 10px;
+}
+
+.my-rowdetail-commentadd {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.my-data-header {
+  min-width: 200px;
+}
+
+.my-search-input {
+  padding-bottom: 20px;
+}
+.sop-finder-form {
+  padding-bottom: 20px;
+}
+.hide-me {
+  display: none;
+}
+
+.padding-top-16 {
+  padding-top: 16px;
+}
+.padding-top-32 {
+  padding-top: 32px;
+}
+.padding-bottom-10 {
+  padding-bottom: 10px;
+}
+.margin-left-10 {
+  margin-left: 10px;
+}
