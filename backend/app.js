@@ -89,37 +89,40 @@ var cos = new ibmcos.S3(config);
 // --------------------------------------------------------------------------
 // Setup the APP ID integration
 // --------------------------------------------------------------------------
-app.use(
-  session({
-    secret: "ibmclientengineeringSECRET123456",
-    resave: true,
-    saveUninitialized: true,
-  })
-);
-app.use(passport.initialize());
-app.use(passport.session());
-passport.serializeUser(function (user, cb) {
-  cb(null, user);
-});
-passport.deserializeUser(function (obj, cb) {
-  cb(null, obj);
-});
 
 // APP ID setup
-passport.use(
-  new WebAppStrategy({
-    tenantId: APPID_TENANT_ID,
-    clientId: APPID_CLIENT_ID,
-    secret: APPID_SECRET,
-    oauthServerUrl: APPID_OAUTH_SERVERURL,
-    redirectUri: APPID_REDIRECT_HOSTNAME + APPID_REDIRECT_URI,
-  })
-);
-// Handle callback
-app.get(
-  APPID_REDIRECT_URI,
-  passport.authenticate(WebAppStrategy.STRATEGY_NAME)
-);
+if (APPID_ENABLED) {
+  app.use(
+    session({
+      secret: "ibmclientengineeringSECRET123456",
+      resave: true,
+      saveUninitialized: true,
+    })
+  );
+  app.use(passport.initialize());
+  app.use(passport.session());
+  passport.serializeUser(function (user, cb) {
+    cb(null, user);
+  });
+  passport.deserializeUser(function (obj, cb) {
+    cb(null, obj);
+  });
+
+  passport.use(
+    new WebAppStrategy({
+      tenantId: APPID_TENANT_ID,
+      clientId: APPID_CLIENT_ID,
+      secret: APPID_SECRET,
+      oauthServerUrl: APPID_OAUTH_SERVERURL,
+      redirectUri: APPID_REDIRECT_HOSTNAME + APPID_REDIRECT_URI,
+    })
+  );
+  // Handle callback
+  app.get(
+    APPID_REDIRECT_URI,
+    passport.authenticate(WebAppStrategy.STRATEGY_NAME)
+  );
+}
 
 // --------------------------------------------------------------------------
 // REST API : health - unprotected endpoint
